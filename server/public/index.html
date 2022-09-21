@@ -31,6 +31,7 @@
     <script src="js/ForgeTree.js"></script>
     <script src="js/ForgeViewer.js"></script>
     <script src="js/ForgeSprites.js"></script>
+    <!-- <script src="js/log.js"></script> -->
   </head>
 
   <body>
@@ -47,7 +48,10 @@
       <h3>Timeline</h3>
     </div>
     <button id="buttonGenerate3d">Gerar 3D</button>
-    <button id="buttonGenerateSprites">Gerar Sprites</button>
+    <button id="buttonGenerateSprites" onclick="print()">print</button>
+    <button id="buttonGenerateSprites" onclick="onModelLoadedLog()">
+      Gerar Sprites
+    </button>
     <div id="forgeViewer"></div>
   </body>
 </html>

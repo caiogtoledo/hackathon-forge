@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  console.log("do forge tree");
   $("#buttonGenerate3d").click(function () {
     getForgeToken(function (access_token) {
       let urn =
