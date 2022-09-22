@@ -14,7 +14,8 @@
     "forge-apis": "^0.9.2",
     "mongoose": "^6.6.1",
     "multer": "^1.4.5-lts.1",
-    "socket.io": "^4.5.2"
+    "socket.io": "^4.5.2",
+    "timelinejs-slider": "^0.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"

@@ -1,5 +1,3 @@
-const mongo = require("../../databases/mongo");
-
 var viewer;
 
 function launchViewer(urn) {

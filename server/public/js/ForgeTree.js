@@ -1,6 +1,9 @@
 $(document).ready(function () {
   console.log("do forge tree");
-  $("#buttonGenerate3d").click(function () {
+  $(".js-timeline").Timeline();
+
+  $(function () {
+    // generateTimeline();
     getForgeToken(function (access_token) {
       let urn =
         "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YmpjcWhnbm9kdDBqaWlzdzd1ZnZsdXJxeTdyMzBtcXctdGVzdGUvVENDLUJpYmxpb3RlY2ElMjBwYXJhJTIwZXhwb3J0YSVDMyU4MyVDMiVBNyVDMyU4MyVDMiVBM28ucnZ0";
