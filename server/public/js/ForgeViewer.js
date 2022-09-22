@@ -1,3 +1,6 @@
+
+const mongo = require("../../databases/mongo");
+
 var viewer;
 
 function launchViewer(urn) {
@@ -26,8 +29,12 @@ function onDocumentLoadSuccess(doc) {
   viewer.loadDocumentNode(doc, viewables).then((i) => {
     // documented loaded, any action?
     generateSprites();
-  });
+    
+
+  })
+   
 }
+
 
 function onDocumentLoadFailure(viewerErrorCode, viewerErrorMsg) {
   console.error(
@@ -68,6 +75,7 @@ async function generateSprites() {
   const myDataList = [
     { position: { x: 10, y: 2, z: 3 } },
     { position: { x: 20, y: 22, z: 3 } },
+    { position: { x: 30, y: 10, z: 3 } }
   ];
 
   myDataList.forEach((myData, index) => {

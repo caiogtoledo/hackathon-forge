@@ -1,6 +1,7 @@
 const path = require("path");
 const express = require("express");
-
+const db = require("./databases/mongo")();
+console.log(db);
 ///////////////////////////
 
 module.exports = {
