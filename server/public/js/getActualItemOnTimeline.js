@@ -22,28 +22,24 @@ function generateCardDetail(data) {
     }
     card.innerHTML = "";
     card.innerHTML += `
-    <div>
-        <div>
+    <div style="padding: 10px; border-radius: 8px"; background: rgb(0, 0, 0, .2)">
+        <div style="opacity: 100%;">
             <strong>Sensor: </strong>${sensor_dict_name[dataToShow.name]}
         </div>
-        <div>
+        <div style="opacity: 100%;">
             <strong>Temperature: </strong>${dataToShow.tmp} °C
         </div>
-        <div>
+        <div style="opacity: 100%;">
             <strong>Luminosity: </strong>${dataToShow.lux} lux
         </div>
-        <div>
+        <div style="opacity: 100%;">
             <strong>Sensor Battery: </strong>${dataToShow.bat} V
         </div>
-        <div>
+        <div style="opacity: 100%;">
             <strong>Humidity: </strong>${dataToShow.hum}%
         </div>
     </div>
     `;
-    // card.innerHTML += `<h1>${dataToShow.name}</h1>`;
-    // card.innerHTML += `<h1>${dataToShow.tmp}</h1>`;
-    // card.innerHTML += `<h1>${dataToShow.lux}</h1>`;
-    // card.innerHTML += `<h1>${dataToShow.bat}</h1>`;
   }
 }
 

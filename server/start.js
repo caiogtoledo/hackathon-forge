@@ -1,17 +1,7 @@
 const path = require("path");
+require("dotenv").config();
 const express = require("express");
 const db = require("./databases/mongo")();
-console.log(db);
-///////////////////////////
-
-module.exports = {
-  entry: "./src/index.js",
-  output: {
-    path: path.resolve(__dirname, "build"),
-    filename: "bundle.js",
-  },
-};
-///////////////////////////
 
 const PORT = process.env.PORT || 3003;
 const config = require("./config");
@@ -28,12 +18,6 @@ if (
 
 let app = express();
 app.use(express.static(path.join(__dirname, "public")));
-// app.use("/build", express.static(path.join(__dirname, "build")));
-
-// app.get("*", (req, res) => {
-//   const route = path.join(__dirname, "..", "client", "build", "index.html");
-//   res.sendFile(route);
-// });
 
 app.use(express.json({ limit: "50mb" }));
 app.use("/api/forge/oauth", require("./routes/oauth"));
