@@ -35,7 +35,7 @@ function generateTimeline(document) {
                 let element = document.createElement("div");
                 let date = `${new Date(register.timestamp)}`;
                 console.log("date: ", date);
-                element.setAttribute("data-time", date);
+                element.setAttribute("data-time", date.slice(3, 25));
                 element.setAttribute("register", register);
                 document.getElementById("timeline").appendChild(element);
               });

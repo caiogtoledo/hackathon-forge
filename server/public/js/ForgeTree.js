@@ -1,5 +1,6 @@
 $(document).ready(function () {
   $(function () {
+    
     generateTimeline(document);
     getForgeToken(function (access_token) {
       let urn =
