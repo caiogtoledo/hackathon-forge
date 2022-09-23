@@ -30,6 +30,8 @@
     <link href="css/main.css" rel="stylesheet" />
     <script src="js/ForgeTree.js"></script>
     <script src="js/ForgeViewer.js"></script>
+    <script src="js/ForgeSpriteHovering.js"></script>
+    <script src="js/getActualItemOnTimeline.js"></script>
     <script
       type="text/javascript"
       src="https://code.jquery.com/jquery-1.12.4.min.js"
@@ -57,49 +59,12 @@
       class="timeline-container timeline-theme-1"
       style="margin-bottom: 55px"
     >
-      <div class="timeline js-timeline" id="timeline">
-        <div data-time="2017"></div>
-        <div data-time="2016"></div>
-        <div data-time="2015"></div>
-        <div data-time="2014"></div>
-        <div data-time="2013"></div>
-        <div data-time="2017"></div>
-        <div data-time="2016"></div>
-        <div data-time="2015"></div>
-        <div data-time="2014"></div>
-        <div data-time="2013"></div>
-        <div data-time="2017"></div>
-        <div data-time="2016"></div>
-        <div data-time="2015"></div>
-        <div data-time="2014"></div>
-        <div data-time="2013"></div>
-        <div data-time="2017"></div>
-        <div data-time="2016"></div>
-        <div data-time="2015"></div>
-        <div data-time="2014"></div>
-        <div data-time="2013"></div>
-        <div data-time="2017"></div>
-        <div data-time="2016"></div>
-        <div data-time="2015"></div>
-        <div data-time="2014"></div>
-        <div data-time="2013"></div>
-        <div data-time="2017"></div>
-        <div data-time="2016"></div>
-        <div data-time="2015"></div>
-        <div data-time="2014"></div>
-        <div data-time="2013"></div>
-        <div data-time="2017"></div>
-        <div data-time="2016"></div>
-        <div data-time="2015"></div>
-        <div data-time="2014"></div>
-        <div data-time="2013"></div>
-        <div data-time="2017"></div>
-        <div data-time="2016"></div>
-        <div data-time="2015"></div>
-        <div data-time="2014"></div>
-        <div data-time="2017"></div>
-      </div>
+      <div class="timeline js-timeline" id="timeline"></div>
     </div>
     <div id="forgeViewer"></div>
+    <div
+      style="position: absolute; left: 10px; z-index: 1"
+      id="sensor-detail"
+    ></div>
   </body>
 </html>

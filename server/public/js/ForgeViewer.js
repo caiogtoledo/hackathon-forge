@@ -75,10 +75,34 @@ async function generateSprites() {
     const dbId = 10 + index;
     const position = myData.position;
     const viewable = new DataVizCore.SpriteViewable(position, style, dbId);
-
+    viewable.myContextData = {
+      sensorManufacturer: "Imaginary Co. Ltd.",
+      sensorModel: "BTE-2900x",
+      labels: ["In Service", "Passive"],
+    };
     viewableData.addViewable(viewable);
   });
 
   await viewableData.finish();
   dataVizExtn.addViewables(viewableData);
+
+  // viewer.addEventListener(DataVizCore.MOUSE_HOVERING, (event) =>
+  //   onSpriteHovering(event, viewableData)
+  // );
+  viewer.addEventListener(DataVizCore.MOUSE_CLICK, onSpriteClicked);
+}
+
+function onSensorSpriteClicked(event) {
+  // The identifier of the `SpriteViewable` that is being clicked.
+  const targetDbId = event.dbId;
+
+  // Look up the corresponding sprite viewable from `viewableData`.
+  const viewables = viewableData.viewables;
+  const viewable = viewables.find((v) => v.dbId === targetDbId);
+
+  if (viewable && viewable.myContextData) {
+    const data = viewable.myContextData;
+    console.log(`Sensor model: ${data.sensorModel}`);
+    // Should print "Sensor model: BTE-2900x"
+  }
 }
