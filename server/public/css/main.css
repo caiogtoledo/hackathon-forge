@@ -1,26 +1,36 @@
-html, body {
-    min-height: 100%;
-    height: 100%;
-  }
+html,
+body {
+  min-height: 100%;
+  height: 100%;
+}
 
-  nav {
-    display: flex;
-    justify-content: center;
-  }
+nav {
+  display: flex;
+  justify-content: center;
+}
 
-  body {
-    padding-top: 40px; /* space for the top nav bar */
-  }
+.title {
+  font-size: 14px;
+  font-weight: bold;
+}
 
-  #appBuckets {
-    overflow: auto;
-    width: 100%;
-    height: calc(100vh - 150px);
-  }
+body {
+  padding-top: 100px; /* space for the top nav bar */
+}
 
-  #forgeViewer {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-  }
+#appBuckets {
+  overflow: auto;
+  width: 100%;
+  height: calc(100vh - 150px);
+}
 
+#forgeViewer {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.background-op {
+  opacity: 90%;
+  background-color: #000"
+}
