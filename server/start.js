@@ -40,6 +40,7 @@ app.use("/api/forge/oauth", require("./routes/oauth"));
 app.use("/api/forge/oss", require("./routes/oss"));
 app.use("/api/forge/modelderivative", require("./routes/modelderivative"));
 app.get("/registers", registers.all);
+app.get("/registers/:name", registers.getByName);
 app.use((err, req, res, next) => {
   console.error(err);
   res.status(err.statusCode).json(err);

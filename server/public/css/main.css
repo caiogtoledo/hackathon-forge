@@ -8,8 +8,13 @@ html, body {
     justify-content: center;
   }
 
+  .title{
+    font-size: 14px;
+    font-weight: bold;
+  }
+
   body {
-    padding-top: 40px; /* space for the top nav bar */
+    padding-top: 100px; /* space for the top nav bar */
   }
 
   #appBuckets {

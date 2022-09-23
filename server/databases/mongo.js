@@ -2,16 +2,19 @@
 const mongoose = require("mongoose");
 
 module.exports = () => {
-  return mongoose
-    .connect(
-      `mongodb+srv://joaopedroboneli:maua2022@cluster0.ojwmeak.mongodb.net/forge_hackathon2022`
-    )
-    .then(() => {
-      console.log("conected!");
-    })
+  return (
+    mongoose
+      // .connect(`${process.env.MONGODB_CNT_STR}`)
+      .connect(
+        `mongodb+srv://joaopedroboneli:maua2022@cluster0.ojwmeak.mongodb.net/forge_hackathon2022`
+      )
+      .then(() => {
+        console.log("conected!");
+      })
 
-    .catch((err) => {
-      console.error(err);
-      process.exit(1);
-    });
+      .catch((err) => {
+        console.error(err);
+        process.exit(1);
+      })
+  );
 };
