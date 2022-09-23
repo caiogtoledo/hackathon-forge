@@ -66,8 +66,9 @@ async function generateSprites() {
   viewableData.spriteSize = 24; // Sprites as points of size 24 x 24 pixels
 
   const myDataList = [
-    { position: { x: 10, y: 2, z: 3 } },
-    { position: { x: 20, y: 22, z: 3 } },
+    { position: { x: -10, y: -50, z: 3 } },
+    { position: { x: 7, y: -50, z: 3 } },
+    { position: { x: 25, y: 37, z: 3 } },
   ];
 
   myDataList.forEach((myData, index) => {
