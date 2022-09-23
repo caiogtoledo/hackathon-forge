@@ -56,7 +56,7 @@
       if (self.options.startItem === "first") {
         nextItem = 0;
       } else if (self.options.startItem === "last") {
-        nextItem = self.get_count() - 1;
+        nextItem = self.get_count() - 10;
       } else {
         nextItem = self.options.startItem;
       }

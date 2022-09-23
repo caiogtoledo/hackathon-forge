@@ -1,9 +1,6 @@
 $(document).ready(function () {
-  console.log("do forge tree");
-  $(".js-timeline").Timeline();
-
   $(function () {
-    // generateTimeline();
+    generateTimeline(document);
     getForgeToken(function (access_token) {
       let urn =
         "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6YmpjcWhnbm9kdDBqaWlzdzd1ZnZsdXJxeTdyMzBtcXctdGVzdGUvVENDLUJpYmxpb3RlY2ElMjBwYXJhJTIwZXhwb3J0YSVDMyU4MyVDMiVBNyVDMyU4MyVDMiVBM28ucnZ0";
@@ -15,6 +12,7 @@ $(document).ready(function () {
           "/manifest",
         headers: { Authorization: "Bearer " + access_token },
         success: function (res) {
+          $(".js-timeline").Timeline();
           if (res.status === "success") launchViewer(urn);
           else
             $("#forgeViewer").html(
