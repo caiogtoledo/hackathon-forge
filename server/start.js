@@ -3,7 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const db = require("./databases/mongo")();
 
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 3004;
 const config = require("./config");
 const registers = require("./routes/registers");
 if (
