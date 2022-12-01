@@ -38,6 +38,9 @@ function generateCardDetail(data) {
         <div style="opacity: 100%;">
             <strong>Humidity: </strong>${dataToShow.hum}%
         </div>
+        <div style="opacity: 100%;">
+            <strong>Presence of People: </strong>${dataToShow.hasPresence}
+        </div>
     </div>
     `;
   }
